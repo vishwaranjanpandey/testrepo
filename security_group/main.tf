@@ -1,8 +1,8 @@
 
 variable "security_group_name" {}
+variable "vpc_id"  {}
 
-
-output " aws_security_group.dev_vpc_sec_group_id " {
+output "dev_vpc_security_group_id" {
   value = aws_security_group.dev_vpc_sec_group.id
 }   
 
@@ -10,7 +10,7 @@ output " aws_security_group.dev_vpc_sec_group_id " {
 resource "aws_security_group" "dev_vpc_sec_group" {
   name        = var.security_group_name
   description = "Allow TLS inbound traffic"
-  vpc_id      = aws_vpc.dev_vpc.id
+  vpc_id      = var.vpc_id
 
   ingress {
     description = "TLS from VPC"

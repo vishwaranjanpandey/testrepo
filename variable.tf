@@ -18,13 +18,9 @@ variable "cidr_private_subnet" {
     description = "private subnet CIDR value"
 }
 
-variable "ap_avalibility_zone" {
+variable "ap_availability_zone" {
     type = list(string)
     description = "availability zone"
 }
 
-variable "security_group_name" {
-    type = string
-    description = "dev-vpc-security-group"
-}
 
