@@ -16,6 +16,10 @@ output "dev_project_vpc_publicsubnet_id" {
   value = aws_subnet.dev_vpc_private_sub.*.id
 }
 
+output "public_subnet_cidr_block" {
+  value = aws_subnet.dev_vpc_public_sub.*.cidr_block
+}
+
 
 resource "aws_vpc" "dev_vpc" {
     cidr_block = var.vpc_cidr

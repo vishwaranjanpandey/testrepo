@@ -23,4 +23,12 @@ variable "ap_availability_zone" {
     description = "availability zone"
 }
 
+variable "ami_id" {
+  type = string
+  description = "ami_id_for_ec2_instance"
+}
 
+variable "instance_type" {
+  type = string
+  description = "ec2_instance_type"
+}
